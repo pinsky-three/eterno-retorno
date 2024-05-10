@@ -57,9 +57,10 @@ void loop() {
   }
 }
 
-// int actuators[] = {13,12,11,10,9,8,7,6,5,4,3,2,14,15,16,17,21,20};
+// // int actuators[] = {13,12,11,10,9,8,7,6,5,4,3,2,14,15,16,17,21,20};
 
 // void setup() {
+//   myservo.attach(22);
 //   for (auto i:actuators) {
 //     pinMode(i, OUTPUT);
 //     digitalWrite(i, HIGH);
@@ -68,9 +69,16 @@ void loop() {
 
 // void loop() {
 //   for (auto i:actuators) {
+//     myservo.write(180);
+//     delay(100);
 //     digitalWrite(i, LOW);
-//     delay(2000);
+//     for (int i=180;i>=0;i--) {
+//       myservo.write(i);
+//       delay(11);
+//     }
+//     // delay(100);
 //     digitalWrite(i, HIGH);
-//     delay(2000);
+//     delay(100);
+
 //   }
 // }

@@ -20,15 +20,15 @@ void setup() {
 void loop() {
   ArduinoCloud.update();
 
-  int veleta_lima2 = map(veleta, 0, 360, 0, 5);
+  int veleta_lima2 = map(veleta, 0, 360, 0, 18);
   int anemometro_lima2 = map(anemometro, 0, 7, 0, 90);
 
   Serial.print("#");
   Serial.print(ledPins[veleta_lima2]);
   Serial.print("$");
-  Serial.print(anemometro_lima2);
+  Serial.print(veleta);
   Serial.print("%");
-  Serial.print(veleta_lima2);
+  Serial.print(anemometro_lima2);
   Serial.print("&");
   Serial.println(ledPins[veleta_lima2]);
 
@@ -36,4 +36,3 @@ void loop() {
 }
 
 void onVeletaLimaChange() {}
-void onAnemometroLimaChange() {}
